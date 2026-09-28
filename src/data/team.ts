@@ -15,7 +15,7 @@ export interface TeamMember {
 export const team: TeamMember[] = [
   {
     name: 'Christian Schranz',
-    title: { en: 'Assoc. Prof. Dipl.-Ing. Dr. techn., M.Sc.', de: 'Assoc. Prof. Dipl.-Ing. Dr. techn., M.Sc.', ja: '准教授 Dipl.-Ing. Dr. techn., M.Sc.' },
+    title: { en: 'Assoc. Prof. Dipl.-Ing. Dr.techn., M.S.', de: 'Assoc. Prof. Dipl.-Ing. Dr.techn., M.S.', ja: '准教授 Dipl.-Ing. Dr.techn., M.S.' },
     role: { en: 'Head of the research unit', de: 'Leiter des Forschungsbereichs', ja: '研究領域長' },
     image: '/images/team/christian-schranz.webp',
     profileUrl: 'https://tiss.tuwien.ac.at/fpl/person/index.xhtml?tid=36976',
@@ -24,7 +24,7 @@ export const team: TeamMember[] = [
   },
   {
     name: 'Harald Urban',
-    title: { en: 'Assistant Prof. Dipl.-Ing. Dr. techn., B.Sc.', de: 'Assistant Prof. Dipl.-Ing. Dr. techn., B.Sc.', ja: '准教授 Dipl.-Ing. Dr. techn., B.Sc.' },
+    title: { en: 'Assistant Prof. Dipl.-Ing. Dr.techn., B.Sc.', de: 'Assistant Prof. Dipl.-Ing. Dr.techn., B.Sc.', ja: '准教授 Dipl.-Ing. Dr.techn., B.Sc.' },
     role: { en: 'Deputy head of the research unit', de: 'Stv. Leiter des Forschungsbereichs', ja: '研究領域副長' },
     image: '/images/team/harald-urban.webp',
     profileUrl: 'https://tiss.tuwien.ac.at/fpl/person/index.xhtml?tid=253092',
@@ -33,7 +33,7 @@ export const team: TeamMember[] = [
   },
   {
     name: 'Simon Fischer',
-    title: { en: 'Senior Scientist Dipl.-Ing. Dr. techn., B.Sc.', de: 'Senior Scientist Dipl.-Ing. Dr. techn., B.Sc.', ja: 'シニアサイエンスティスト Dipl.-Ing. Dr. techn., B.Sc.' },
+    title: { en: 'Senior Scientist Dipl.-Ing. Dr.techn., B.Sc.', de: 'Senior Scientist Dipl.-Ing. Dr.techn., B.Sc.', ja: 'シニアサイエンスティスト Dipl.-Ing. Dr.techn., B.Sc.' },
     image: '/images/team/simon-fischer.webp',
     profileUrl: 'https://tiss.tuwien.ac.at/person/291973.html',
     linkedinUrl: 'https://www.linkedin.com/in/simon-fischer-6526b4211/',

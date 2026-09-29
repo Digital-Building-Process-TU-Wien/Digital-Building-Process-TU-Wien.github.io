@@ -8,7 +8,7 @@ const { item, language, readMore, source } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const image = item.image ? `${base}${item.image.replace(/^\//, '')}` : undefined;
 ---
-<article class="news-card">
+<article class:list={['news-card', { 'news-card-featured': item.featured }]}>
   {item.image && <a class="news-card-image" href={item.url} target="_blank" rel="noreferrer" aria-label={`${readMore}: ${item.title[language]}`}>
     <img src={image} alt={item.imageAlt[language]} loading="lazy" decoding="async" width="720" height="420" />
   </a>}

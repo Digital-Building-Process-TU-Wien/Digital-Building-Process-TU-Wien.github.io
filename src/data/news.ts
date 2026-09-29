@@ -9,26 +9,28 @@ export interface NewsItem {
   url: string;
   image?: string;
   imageAlt: LocalizedText;
+  featured?: boolean;
 }
 
 export const news: NewsItem[] = [
   {
-    id: 'bimcert-handbuch-2026',
-    date: '2026-03-18',
-    dateLabel: { en: '18 March 2026', de: '18. März 2026', ja: '2026年3月18日' },
+    id: 'bimcert-handbook-japanese-version',
+    featured: true,
+    date: '2026-10-06',
+    dateLabel: { en: '6 October 2026', de: '6. Oktober 2026', ja: '2026年10月6日' },
     title: {
-      en: 'BIMcert Handbook 2026 published',
-      de: 'BIMcert Handbuch 2026 erschienen',
-      ja: 'BIMcertハンドブック2026刊行',
+      en: 'BIMcert Handbook Japanese Version released!',
+      de: 'BIMcert Handbuch: Japanische Version erschienen!',
+      ja: 'BIMcertハンドブック日本語版刊行！',
     },
     summary: {
-      en: 'The 2026 edition brings the BIMcert knowledge base up to date and highlights collaborative translation work that brings experience from other countries into the handbook.',
-      de: 'Die Ausgabe 2026 aktualisiert das BIMcert-Wissen und betont gemeinschaftliche Übersetzungsarbeiten, die Erfahrungen aus anderen Ländern in das Handbuch einbringen.',
-      ja: '2026年版はBIMcertの知識基盤を最新化し、共同翻訳によって他国での経験をハンドブックに取り入れる取り組みを紹介しています。',
+      en: 'With heartfelt thanks to the Japanese editors for their dedication and collaboration:\n足達 嘉信 (Yoshinobu Adachi),\n能勢 浩三 (Kozo Nose)',
+      de: 'Mit herzlichem Dank an die japanischen Editors für ihren Einsatz und die gute Zusammenarbeit:\n足達 嘉信 (Yoshinobu Adachi),\n能勢 浩三 (Kozo Nose)',
+      ja: '日本語版の編集にご尽力いただいた以下の編集者の皆様に、心より感謝申し上げます。\n足達 嘉信（Yoshinobu Adachi）\n能勢 浩三（Kozo Nose）',
     },
-    url: 'https://www.tuwien.at/cee/ibb/zdb/aktuelles/news/bimcert-handbuch-2026-erschienen',
-    image: '/images/news/bimcert-handbuch-2026.webp',
-    imageAlt: { en: 'Cover of the BIMcert Handbook 2026', de: 'Titelseite des BIMcert-Handbuchs 2026', ja: 'BIMcertハンドブック2026表紙' },
+    url: 'https://doi.org/10.34726/12402',
+    image: '/images/news/bimcert-handbook-japanese-version.webp',
+    imageAlt: { en: 'Cover of the Japanese version of the BIMcert Handbook 2026', de: 'Titelseite der japanischen Version des BIMcert-Handbuchs 2026', ja: 'BIMcertハンドブック2026 日本語版の表紙' },
   },
   {
     id: 'openbim-building-code-compliance-checks',

@@ -7,9 +7,11 @@ interface Props { member: TeamMember; language: Language; viewProfile: string; }
 const { member, language, viewProfile } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const image = `${base}${member.image.replace(/^\//, '')}`;
+const imageHref = member.linkedinUrl ?? member.profileUrl;
+const imageLabel = member.linkedinUrl ? `LinkedIn: ${member.name}` : `${viewProfile}: ${member.name}`;
 ---
 <article class="team-card">
-  <a class="team-card-image" href={member.profileUrl} target="_blank" rel="noreferrer" aria-label={`${viewProfile}: ${member.name}`}>
+  <a class="team-card-image" href={imageHref} target="_blank" rel="noreferrer" aria-label={imageLabel}>
     <img src={image} alt={member.name} loading="lazy" decoding="async" width="112" height="112" />
     <span class="team-card-ring" aria-hidden="true"></span>
   </a>

@@ -1,9 +1,10 @@
 name: Deploy GitHub Pages
 
 on:
-  push:
-    branches: [master]
   workflow_dispatch:
+  schedule:
+    # 2026-10-05 00:00 JST = 2026-10-04 15:00 UTC
+    - cron: '0 15 4 10 *'
 
 permissions:
   contents: read

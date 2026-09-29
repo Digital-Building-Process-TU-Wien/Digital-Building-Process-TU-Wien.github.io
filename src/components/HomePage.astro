@@ -13,6 +13,8 @@ interface Props { language: Language; }
 const { language } = Astro.props;
 const copy = siteCopy[language];
 const base = import.meta.env.BASE_URL;
+const featuredNews = news.find((item) => item.featured);
+const featuredImage = featuredNews?.image ? `${base}${featuredNews.image.replace(/^\//, '')}` : undefined;
 ---
 <BaseLayout language={language} title={`${copy.title} · TU Wien`} description={copy.heroIntro}>
   <div class="site-shell">
@@ -36,6 +38,18 @@ const base = import.meta.env.BASE_URL;
     </header>
 
     <main>
+      {featuredNews && <aside class="container hero-teaser">
+        <a class="hero-teaser-link" href="#news">
+          {featuredImage && <img class="hero-teaser-image" src={featuredImage} alt="" width="56" height="79" loading="eager" decoding="async" />}
+          <span class="hero-teaser-text">
+            <span class="hero-teaser-label">{copy.newsTeaserLabel}</span>
+            <span class="hero-teaser-title">{featuredNews.title[language]}</span>
+            <span class="hero-teaser-summary">{featuredNews.summary[language]}</span>
+          </span>
+          <Arrow size={18} />
+        </a>
+      </aside>}
+
       <section class="hero">
         <div class="container hero-grid">
           <div>
